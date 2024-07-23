@@ -25,7 +25,7 @@
   "homepage": "https://github.com/c6fc/npk#readme",
   "dependencies": {
     "@c6fc/sonnetry": "^3.1.2",
-    "aws-sdk": "^2.1018.0",
+    "aws-sdk": "^2.1661.0",
     "inquirer": "^8.2.0",
     "yargs": "^17.3.1"
   }
