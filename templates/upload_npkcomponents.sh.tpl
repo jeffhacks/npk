@@ -22,7 +22,7 @@ export AWS_PROFILE=$(jq -r '.awsProfile' ../terraform/npk-settings.json)
 
 echo "- Downloading components"
 # if [ ! -f ${basepath}/components/hashcat.7z ]; then
-# 	wget -O ${basepath}/components/hashcat.7z https://hashcat.net/files/hashcat-6.2.4.7z
+# 	wget -O ${basepath}/components/hashcat.7z https://hashcat.net/files/hashcat-7.1.1.7z
 # fi
 
 # if [ ! -f ${basepath}/components/maskprocessor.7z ]; then

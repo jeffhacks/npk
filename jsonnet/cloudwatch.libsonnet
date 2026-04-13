@@ -6,7 +6,7 @@
 				description: "Trigger spot monitor every 1 minute",
 				schedule_expression: "rate(1 minute)",
 				role_arn: "${aws_iam_role.cloudwatch_invoke_spot_monitor.arn}",
-				is_enabled: true
+				state: "ENABLED"
 			}
 		},
 		aws_cloudwatch_event_target:{

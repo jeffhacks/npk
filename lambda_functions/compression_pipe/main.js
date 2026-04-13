@@ -133,7 +133,7 @@ exports.main = async function(event, context, callback) {
     			Values: ["137112412989"]
 		    }, {
 		    	Name: "name",
-		    	Values: ["amzn2-ami-hvm-2.0.20*"]
+		    	Values: ["Amazon Linux 2023 kernel-6.* AMI"]
 		    }]
 		}).promise()
 

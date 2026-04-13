@@ -13,6 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/c6fc/npk.git"
   },
+  "config": {
+    "tf_version": "1.11.4"
+  },
   "engines": {
     "node": ">=17.0.1",
     "npm": ">=8.1.0"
@@ -24,7 +27,7 @@
   },
   "homepage": "https://github.com/c6fc/npk#readme",
   "dependencies": {
-    "@c6fc/sonnetry": "^3.1.2",
+    "@c6fc/sonnetry": "^3.1.5",
     "aws-sdk": "^2.1018.0",
     "inquirer": "^8.2.0",
     "yargs": "^17.3.1"

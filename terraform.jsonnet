@@ -79,9 +79,7 @@ local regionKeys = std.objectFields(settings.regions);
   				types: ["EDGE"]
   			}
   		},
-  		deployment: {
-  			stage_name: "v1"
-  		},
+  		deployment: {},
   		root: {
   			children: [{
   				pathPart: "userproxy",
@@ -205,7 +203,7 @@ local regionKeys = std.objectFields(settings.regions);
 			aws_api_gateway_base_path_mapping: {
 				[apiName]: {
 					api_id: "${aws_api_gateway_rest_api.%s.id}" % apiName,
-					stage_name: "${aws_api_gateway_deployment.%s.stage_name}" % apiName,
+					stage_name: "${aws_api_gateway_stage.%s.stage_name}" % apiName,
 					domain_name: "${aws_api_gateway_domain_name.npk.domain_name}",
 					base_path: "v1"
 				}
@@ -852,7 +850,7 @@ local regionKeys = std.objectFields(settings.regions);
 			required_providers: {
 				aws: {
 					source: "hashicorp/aws",
-					version: "~> 4.66.0"
+					version: "~> 5.94.1"
 				},
 				archive: {
 					source: "hashicorp/archive",
@@ -932,6 +930,9 @@ local regionKeys = std.objectFields(settings.regions);
 					rule: {
 						id: "1",
 						status: "Enabled",
+						filter: {
+							prefix: "",
+						},
 						expiration: {
 							days: 7
 						},

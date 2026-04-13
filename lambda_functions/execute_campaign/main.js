@@ -225,7 +225,7 @@ exports.main = async function(event, context, callback) {
     	Values: [archs[manifest.instanceType]]
     });
 
-    const defaultImageName = "Deep Learning AMI GPU TensorFlow * (Amazon Linux 2) *";
+    const defaultImageName = "Deep Learning Base OSS Nvidia Driver GPU AMI (Amazon Linux 2023) *";
 
 	imageFilters.push({
     	Name: "name",

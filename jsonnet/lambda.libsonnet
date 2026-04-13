@@ -7,7 +7,7 @@ local lambda_function(name, config, role_policy) = {
 				function_name: name,
 				filename: "%s/lambda_functions/zip_files/%s.zip" % [sonnetry.path(), name],
 				source_code_hash: "${data.archive_file." + name + ".output_base64sha256}",
-				runtime: "nodejs18.x",
+				runtime: "nodejs22.x",
 				role: "${aws_iam_role.lambda-" + name + ".arn}",
 				depends_on: ["data.archive_file." + name, "aws_iam_role_policy.lambda-" + name],
 			}

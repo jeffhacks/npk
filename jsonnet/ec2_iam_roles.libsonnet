@@ -56,6 +56,12 @@
 				]}'
 			}
 		},
+		"aws_iam_role_policy_attachment": {
+			"npk_instance_role_attach_ssm": {
+				"role": "${aws_iam_role.npk_instance_role.id}",
+				"policy_arn": "arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"
+			}
+		}
 	},
 	data: {
 		"aws_iam_policy_document": {
@@ -115,7 +121,7 @@
 						"execute-api:Invoke"
 					],
 					"resources": [
-						"${aws_api_gateway_deployment.%s.execution_arn}/*/statusreport/*" % apiName
+						"${aws_api_gateway_deployment.%s.execution_arn}*/statusreport/*" % apiName
 					]
 				}]
 			}

@@ -31,10 +31,10 @@ angular
 
                // If the identity type is SAML, the 'payload' object is merged into the parent 'idToken'.
                if (!this.cognitoUserSession.idToken.hasOwnProperty('payload')) {
-                  return this.cognitoUserSession.idToken['cognito:groups'].indexOf('npk-admins') > -1;
+                  return this.cognitoUserSession.idToken['cognito:groups']?.indexOf('npk-admins') > -1;
                }
 
-               return this.cognitoUserSession.idToken.payload['cognito:groups'].indexOf('npk-admins') > -1;
+               return this.cognitoUserSession.idToken.payload['cognito:groups']?.indexOf('npk-admins') > -1;
             },
 
             isLoggedOn: function() {
